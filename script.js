@@ -1,11 +1,13 @@
-// Mobile menu toggle
+// Mobile menu toggle with better touch support
 const menuToggle = document.querySelector('.menu-toggle');
 const headerUl = document.querySelector('.header__ul');
+const headerNav = document.querySelector('.header__nav');
 
-if (menuToggle && headerUl) {
-    menuToggle.addEventListener('click', () => {
-        headerUl.classList.toggle('active');
-        const isExpanded = headerUl.classList.contains('active');
+// Check if elements exist
+if (menuToggle && headerUl && headerNav) {
+    // Toggle menu function
+    const toggleMenu = () => {
+        const isExpanded = headerUl.classList.toggle('active');
         menuToggle.setAttribute('aria-expanded', isExpanded);
         
         // Change icon
@@ -13,10 +15,18 @@ if (menuToggle && headerUl) {
         if (isExpanded) {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-times');
+            document.body.style.overflow = 'hidden'; // Prevent body scrolling
         } else {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
+            document.body.style.overflow = ''; // Re-enable body scrolling
         }
+    };
+    
+    // Toggle menu on button click
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
     });
     
     // Close menu when clicking on a link
@@ -28,17 +38,31 @@ if (menuToggle && headerUl) {
             const icon = menuToggle.querySelector('i');
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
+            document.body.style.overflow = ''; // Re-enable body scrolling
         });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!headerUl.contains(e.target) && !menuToggle.contains(e.target)) {
+        if (!headerNav.contains(e.target) && headerUl.classList.contains('active')) {
             headerUl.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
             const icon = menuToggle.querySelector('i');
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
+            document.body.style.overflow = ''; // Re-enable body scrolling
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && headerUl.classList.contains('active')) {
+            headerUl.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            document.body.style.overflow = ''; // Re-enable body scrolling
         }
     });
 }
@@ -62,49 +86,107 @@ if (backToTop) {
     });
 }
 
-// Form submission (basic)
+// Form submission with better validation
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
         // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
         
-        // Basic validation
-        if (!name || !email || !message) {
-            alert('لطفاً تمام فیلدها را پر کنید.');
+        // Validation
+        let errors = [];
+        
+        if (!name) errors.push('نام کامل الزامی است');
+        if (!email) errors.push('ایمیل الزامی است');
+        if (!message) errors.push('پیام الزامی است');
+        
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errors.push('فرمت ایمیل نامعتبر است');
+        }
+        
+        if (errors.length > 0) {
+            alert('لطفاً خطاهای زیر را اصلاح کنید:\n\n' + errors.join('\n'));
             return;
         }
         
-        // Here you would normally send the data to a server
-        // For now, just show a success message
-        alert(`پیام شما با موفقیت ارسال شد!\n\nنام: ${name}\nایمیل: ${email}\nپیام: ${message}`);
+        // Show success message
+        alert('پیام شما با موفقیت ارسال شد! به زودی با شما تماس خواهیم گرفت.');
         
         // Reset form
         contactForm.reset();
+        
+        // Scroll to top of form
+        contactForm.scrollIntoView({ behavior: 'smooth' });
     });
 }
 
-// Add hover effects to sample project cards
+// Add loading lazy for images
 document.addEventListener('DOMContentLoaded', () => {
-    const sampleCards = document.querySelectorAll('.sample__ul li');
+    // Lazy load images if not already loaded
+    const images = document.querySelectorAll('img[loading="lazy"]');
     
-    sampleCards.forEach(card => {
+    // Add hover effects to service cards
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            const icon = card.querySelector('.sample__icon');
+            const icon = card.querySelector('.service-icon');
             if (icon) {
-                icon.style.transform = 'scale(1.1) rotate(5deg)';
+                icon.style.transform = 'scale(1.1)';
             }
         });
         
         card.addEventListener('mouseleave', () => {
-            const icon = card.querySelector('.sample__icon');
+            const icon = card.querySelector('.service-icon');
             if (icon) {
-                icon.style.transform = 'scale(1) rotate(0deg)';
+                icon.style.transform = 'scale(1)';
             }
         });
     });
+    
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Only smooth scroll for internal page links
+            if (href !== '#' && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
+
+// Handle window resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Close mobile menu on large screens
+        if (window.innerWidth > 768) {
+            const headerUl = document.querySelector('.header__ul');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (headerUl && menuToggle) {
+                headerUl.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        }
+    }, 250);
 });
