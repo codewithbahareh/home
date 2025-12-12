@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Bahareh Karbalei">
+    <meta name="description" content="طراحی صفحات وب حرفه‌ای | ایجاد وبسایت‌های مدرن، واکنش‌گرا و بهینه‌سازی شده با آخرین تکنولوژی‌های وب | آموزش HTML و CSS | desing a website | responsive website ">
+    <title>Code With Bahareh | نمونه کارها و آموزش</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- add fav icon
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">پرش به محتوا</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__h1">
+                    <i class="fas fa-code"></i>
+                    <span class="nowrap">Code With Bahareh</span>
+                    <span class="header__subtitle nowrap">طراحی وب حرفه‌ای</span>
+                </h1>
+                <nav class="header__nav" aria-label="منوی اصلی">
+                    <button class="menu-toggle" aria-label="بازکردن منو" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <ul class="header__ul">
+                        <li><a href="./"><i class="fas fa-home"></i> خانه</a></li>
+                        <li><a href="./#about"><i class="fas fa-user"></i> درباره من</a></li>
+                        <li><a href="./#services"><i class="fas fa-laptop-code"></i> خدمات</a></li>
+                        <li><a href="#teaching"><i class="fas fa-graduation-cap"></i> آموزش</a></li>
+                        <li><a href="./#contact"><i class="fas fa-envelope"></i> تماس</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h2 class="hero__title">
+                    نمونه کارهای طراحی وب
+                    <span class="highlight">خلاقیت و تخصص</span>
+                </h2>
+                <p class="hero__description">
+                    در این بخش می‌توانید نمونه‌هایی از پروژه‌های طراحی و توسعه وب را مشاهده کنید.
+                    هر پروژه با دقت و توجه به جزئیات اجرا شده است.
+                </p>
+                <div class="hero__buttons">
+                    <a href="./#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> شروع پروژه
+                    </a>
+                    <a href="https://www.youtube.com/@CodeWithBahareh" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-youtube"></i> کانال یوتیوب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main">
+        <!-- YouTube Channel Section -->
+        <section id="youtube-channel" class="section youtube-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fab fa-youtube"></i>
+                    کانال آموزشی یوتیوب
+                </h2>
+                <div class="youtube-content">
+                    <div class="youtube-info">
+                        <h3>آموزش رایگان طراحی وب</h3>
+                        <p>در کانال یوتیوب Code With Bahareh، آموزش‌های کامل و پروژه‌محور HTML، CSS و JavaScript را به زبان فارسی دنبال کنید. از مقدماتی تا پیشرفته، همه‌چیز را با جزئیات یاد بگیرید.</p>
+                        
+                        <div class="channel-stats">
+                            <div class="stat">
+                                <i class="fas fa-video"></i>
+                                <span>۱۰۰+ ویدیوی آموزشی</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>۵,۰۰۰+ عضو</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>آپلود هفتگی</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/@CodeWithBahareh" 
+                           class="btn btn-youtube"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                            مشاهده کانال یوتیوب
+                        </a>
+                    </div>
+                    
+                    <div class="youtube-embed">
+                        <div class="video-placeholder">
+                            <i class="fab fa-youtube"></i>
+                            <p>آخرین ویدیوهای آموزشی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="section teaching-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    آموزش HTML و CSS
+                </h2>
+                <p class="section-subtitle">آموزش کامل از صفر تا صد طراحی وب با بهترین متدهای روز دنیا</p>
+                
+                <div class="teaching-cards">
+                    <!-- HTML Course -->
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>آموزش HTML</h3>
+                        <p class="course-description">
+                            آموزش کامل زبان نشانه‌گذاری HTML5 با تمرین‌های عملی و پروژه‌محور. از تگ‌های پایه تا المان‌های پیشرفته HTML5.
+                        </p>
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> تگ‌های پایه HTML</li>
+                            <li><i class="fas fa-check"></i> فرم‌ها و ورودی‌ها</li>
+                            <li><i class="fas fa-check"></i> Semantic HTML</li>
+                            <li><i class="fas fa-check"></i> SEO بهینه</li>
+                        </ul>
+                        <div class="course-links">
+                            <a href="https://www.youtube.com/@CodeWithBahareh/playlists?view=50&sort=dd&shelf_id=1" 
+                               class="btn btn-outline"
+                               target="_blank">
+                                <i class="fab fa-youtube"></i> پلی‌لیست HTML
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-download"></i> منابع آموزشی
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- CSS Course -->
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3>آموزش CSS</h3>
+                        <p class="course-description">
+                            استایل‌دهی حرفه‌ای با CSS3، Flexbox، Grid و انیمیشن. طراحی واکنش‌گرا و ایجاد رابط کاربری زیبا و مدرن.
+                        </p>
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> Flexbox و Grid</li>
+                            <li><i class="fas fa-check"></i> طراحی Responsive</li>
+                            <li><i class="fas fa-check"></i> انیمیشن و Transition</li>
+                            <li><i class="fas fa-check"></i> Variables و Custom Properties</li>
+                        </ul>
+                        <div class="course-links">
+                            <a href="https://www.youtube.com/@CodeWithBahareh/playlists?view=50&sort=dd&shelf_id=2" 
+                               class="btn btn-outline"
+                               target="_blank">
+                                <i class="fab fa-youtube"></i> پلی‌لیست CSS
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-download"></i> تمرین‌های عملی
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Projects Course -->
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>پروژه‌های عملی</h3>
+                        <p class="course-description">
+                            ساخت پروژه‌های واقعی از ساده تا پیشرفته. ایجاد نمونه کارهای حرفه‌ای برای استخدام و فریلنسینگ.
+                        </p>
+                        <ul class="course-topics">
+                            <li><i class="fas fa-check"></i> وبسایت شخصی</li>
+                            <li><i class="fas fa-check"></i> فروشگاه آنلاین</li>
+                            <li><i class="fas fa-check"></i> داشبورد ادمین</li>
+                            <li><i class="fas fa-check"></i> طراحی Landing Page</li>
+                        </ul>
+                        <div class="course-links">
+                            <a href="https://www.youtube.com/@CodeWithBahareh/playlists?view=50&sort=dd&shelf_id=3" 
+                               class="btn btn-outline"
+                               target="_blank">
+                                <i class="fab fa-youtube"></i> پروژه‌های عملی
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-code"></i> سورس کدها
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section resources-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-book-open"></i>
+                    منابع آموزشی رایگان
+                </h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-file-code"></i>
+                        <h3>چک لیست‌ها</h3>
+                        <p>چک لیست‌های آماده برای یادگیری و مرور HTML و CSS</p>
+                        <a href="#" class="resource-link">دانلود رایگان</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>رنگ‌های آماده</h3>
+                        <p>پالت‌های رنگی حرفه‌ای برای پروژه‌های طراحی وب</p>
+                        <a href="#" class="resource-link">مشاهده پالت‌ها</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <i class="fas fa-font"></i>
+                        <h3>فونت‌های فارسی</h3>
+                        <p>مجموعه فونت‌های فارسی بهینه برای وب</p>
+                        <a href="#" class="resource-link">دانلود فونت</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>پرسش و پاسخ</h3>
+                        <p>پاسخ به سوالات متداول درباره طراحی وب</p>
+                        <a href="./#contact" class="resource-link">ارسال سوال</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>
+                        <i class="fas fa-code"></i>
+                        Code With Bahareh
+                    </h3>
+                    <p>متخصص در طراحی و توسعه وبسایت‌های مدرن و کاربرپسند</p>
+                </div>
+                
+                <div class="footer__social">
+                    <h4>شبکه‌های اجتماعی</h4>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@CodeWithBahareh" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="کانال یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="واتساپ">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" aria-label="گیتهاب">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4>اطلاعات تماس</h4>
+                    <p><i class="fas fa-envelope"></i> ایمیل: codewithbahareh@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>
+                        <a href="tel:+989131014876">
+                        تماس تلفنی 
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="copyright">
+                    <i class="far fa-copyright"></i> 
+                    ۱۴۰۳ Code With Bahareh. تمامی حقوق محفوظ است.
+                </p>
+                <p class="designer">
+                    طراحی و توسعه شده با <i class="fas fa-heart"></i> توسط بهاره کاربلد
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
