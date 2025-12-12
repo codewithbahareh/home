@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Bahareh Karbalei">
+    <meta name="description" content="طراحی صفحات وب حرفه‌ای | ایجاد وبسایت‌های مدرن، واکنش‌گرا و بهینه‌سازی شده با آخرین تکنولوژی‌های وب | desing a website | responsive website ">
+    <title>Code With Bahareh | طراحی وب حرفه‌ای</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- add fav icon
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">پرش به محتوا</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__h1">
+                    <i class="fas fa-code"></i>
+                    <span class="nowrap">Code With Bahareh</span>
+                    <span class="header__subtitle nowrap">طراحی وب حرفه‌ای</span>
+                </h1>
+                <!-- what is this button???? -->
+                <nav class="header__nav" aria-label="منوی اصلی">
+                    <button class="menu-toggle" aria-label="بازکردن منو" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <ul class="header__ul">
+                        <li><a href="#about"><i class="fas fa-user"></i> درباره من</a></li>
+                         <li><a href="teaching.html"><i class="fas fa-chalkboard-teacher"></i> آموزش</a></li>
+                        <li><a href="#services"><i class="fas fa-laptop-code"></i> خدمات</a></li>
+                        <li><a href="sample-project.html"><i class="fas fa-briefcase"></i> نمونه کارها</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> تماس</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h2 class="hero__title">
+                    طراحی پیج خود را به ما بسپارید
+                    <span class="highlight">با کیفیت و اطمینان</span>
+                </h2>
+                <p class="hero__description">
+                    تخصص ما در طراحی وبسایت‌های مدرن، واکنش‌گرا و بهینه‌سازی شده است. 
+                    هر پروژه با دقت و خلاقیت اجرا می‌شود تا بهترین تجربه کاربری را ارائه دهد.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> شروع پروژه
+                    </a>
+                    <a href="sample-project.html" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> مشاهده نمونه کارها
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main">
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section__title">
+                    <i class="fas fa-user-circle"></i> درباره من
+                </h2>
+                <div class="about__content">
+                    <!-- add my profile picture -->
+                    <div class="about__image">
+                        <div class="image-placeholder">
+                            <img src="image/transparent-profile-430-580.png" alt="طراح وب بهاره کربلایی" title="طراح وب بهاره کربلایی" width="430" height="580" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="about__text">
+                        <h3>بهاره کاربلایی - توسعه‌دهنده وب</h3>
+                        <p>
+                             تجربه در زمینه طراحی و توسعه وب، 
+                            تخصص من در ایجاد وبسایت‌های مدرن، واکنش‌گرا و کاربرپسند است.
+                            از HTML و CSS گرفته تا JavaScript و فریمورک‌های مدرن، 
+                            هر پروژه را با دقت و توجه به جزئیات اجرا می‌کنم.
+                        </p>
+                        <p>
+                            معتقدم یک وبسایت موفق نه تنها باید زیبا باشد، 
+                            بلکه باید سریع، امن و قابل دسترس برای همه کاربران باشد.
+                        </p>
+                        <div class="skills">
+                            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <!-- <span class="skill-tag"><i class="fab fa-react"></i> React</span> -->
+                            <span class="skill-tag"><i class="fas fa-mobile-alt"></i> واکنش‌گرا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <h2 class="section__title">
+                    <i class="fas fa-laptop-code"></i> خدمات ما
+                </h2>
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>طراحی وبسایت</h3>
+                        <p>طراحی حرفه‌ای وبسایت با آخرین تکنولوژی‌ها و استانداردهای روز</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>واکنش‌گرا (Responsive)</h3>
+                        <p>سازگاری کامل با تمام دستگاه‌ها از موبایل تا دسکتاپ</p>
+                    </div>
+                    
+                    <a href="teaching.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i> <!-- Changed from shopping cart -->
+                            </div>
+                                <h3>آموزش</h3>
+                                <p>آموزش کامل و پروژه‌محور HTML و CSS از صفر تا پیشرفته با پشتیبانی آنلاین</p> <!-- Improved description -->
+                        </div>
+                    </a>        
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>بهینه‌سازی SEO</h3>
+                        <p>بهبود رتبه در موتورهای جستجو با تکنیک‌های مدرن</p>
+                    </div>
+                       <a href="github.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i> <!-- Changed from shopping cart -->
+                            </div>
+                                <h3>گیت هاب</h3>
+                                <p>میزبانی رایگان وبسایت‌های استاتیک</p> <!-- Improved description -->
+                        </div>
+                    </a>  
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section__title">
+                    <i class="fas fa-envelope"></i> تماس با ما
+                </h2>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>تلفن تماس</h3>
+                                <p class="contact-detail">۰۹۱۳۱۵۴۸۷۶</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>آدرس ایمیل</h3>
+                                <p class="contact-detail">info@codwithbahare.academy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>آدرس</h3>
+                                <p class="contact-detail">اصفهان، ایران</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>ساعات کاری</h3>
+                                <p class="contact-detail">شنبه تا چهارشنبه: ۹ صبح تا ۶ عصر</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">نام کامل</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">ایمیل</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">پیام شما</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> ارسال پیام
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>
+                        <i class="fas fa-code"></i>
+                        Code With Bahareh
+                    </h3>
+                    <p>متخصص در طراحی و توسعه وبسایت‌های مدرن و کاربرپسند</p>
+                </div>
+                
+                <div class="footer__social">
+                    <h4>شبکه‌های اجتماعی</h4>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@CodeWithBahareh" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="کانال یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" aria-label="واتساپ">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" aria-label="گیتهاب">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__contact">
+                    <h4>اطلاعات تماس</h4>
+                    <p><i class="fas fa-envelope"></i> ایمیل: codewithbahareh@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>
+                        <a href="tel:+989131014876">
+                        تماس تلفنی 
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="copyright">
+                    <i class="far fa-copyright"></i> 
+                    ۱۴۰۳ Code With Bahareh. تمامی حقوق محفوظ است.
+                </p>
+                <p class="designer">
+                    طراحی و توسعه شده با <i class="fas fa-heart"></i> توسط بهاره کاربلد
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
