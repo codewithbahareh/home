@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# Run on pushes to main and also let you run manually
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure publish folder contains verification files
+        run: |
+          # Adjust publish folder name if your site uses a different folder
+          PUBLISH_DIR=public
+          echo "Using publish dir: $PUBLISH_DIR"
+          mkdir -p "$PUBLISH_DIR"
+          # Copy repo index and google verification file into publish dir
+          cp index.html "$PUBLISH_DIR/" || true
+          cp googlef2dbc6ccd829c816.html "$PUBLISH_DIR/" || true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './public'
+
+  # This job uses the artifact uploaded above to publish to GitHub Pages
+  publish:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
