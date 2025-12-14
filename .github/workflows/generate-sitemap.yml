@@ -9,10 +9,14 @@ on:
 jobs:
   generate-sitemap:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # این خط جدید را اضافه کنید
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        
+        uses: actions/checkout@v3  # نسخه را آپدیت کنید
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # این خط جدید را اضافه کنید
+          
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
         with:
