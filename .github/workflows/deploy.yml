@@ -1,0 +1,25 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # فایل تأیید گوگل به طور خودکار وجود دارد (شما قبلاً آپلود کرده‌اید)
+      - name: Verify Google file exists
+        run: |
+          ls -la google*.html
+          echo "Google verification file is ready"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .  # کل پوشه فعلی را منتشر می‌کند
