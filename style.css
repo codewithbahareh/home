@@ -1217,7 +1217,7 @@ body {
 
 .about__text p {
     margin-bottom: var(--spacing-sm);
-    color: var(--gray);
+   color: #0d0e0f;
     font-size: clamp(0.9rem, 1.8vh, 1.1rem);
 }
 
@@ -2252,27 +2252,12 @@ body {
   margin-bottom: .8rem;
 }
 
-/* Typography */
-.main h2,
-.main h3,
-.main h4 {
-  color: #e6edf3;
-}
-
-.main p,
-.main li {
-  line-height: 1.9;
-  color: #c9d1d9;
-}
-
 /* Mobile */
 @media (max-width: 600px) {
   .gh-card {
     padding: 1.4rem;
   }
 }
-
-    
     /* Hero mobile fixes */
     .hero__title {
         font-size: clamp(1.2rem, 2.5vh, 1.5rem);
@@ -2359,4 +2344,5 @@ body {
         padding: var(--spacing-xs);
     }
 }
+
 
