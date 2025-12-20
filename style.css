@@ -30,7 +30,7 @@
     --footer-link-hover: #a6c6ff;
     --footer-link-active: #3a0ca3;
     /* Typography */
-    --font-heading: 'Lalezar', cursive;
+    --font-heading: 'Lalezar', 'Vazirmatn', sans-serif;
     --font-body: 'Vazirmatn', sans-serif;
     
     /* Spacing */
@@ -2359,3 +2359,4 @@ body {
         padding: var(--spacing-xs);
     }
 }
+
