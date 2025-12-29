@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /image/pic.html  # اگر نمی‌خواهید این صفحه ایندکس شود
+Disallow: /temp/           # اگر فایل‌های موقت دارید
+Disallow: /cgi-bin/        # اگر وجود دارد
+
+Crawl-delay: 2
+
+Sitemap: https://codewithbahareh.github.io/home/sitemap.xml
