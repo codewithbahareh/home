@@ -7,436 +7,411 @@
     <meta name="author" content="Bahareh Karbalei">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://codewithbahareh.github.io/home/">
-    <!-- ================= Structured Data ================= -->
+    <!-- ============================================================
+    SECTION: CANONICAL & ALTERNATE URLs
+    ============================================================ -->
+    <link rel="canonical" href="https://codewithbahareh.github.io/home/" />
+    <link rel="alternate" hreflang="fa" href="https://codewithbahareh.github.io/home/">
+
+    <!-- ============================================================
+    SECTION: RESOURCE PRELOADING & PREFETCH
+    ============================================================ -->
+    <link rel="preload" as="image" href="img/transparent-profile-430-580.png">
+    <link rel="prefetch" href="teaching.html">
+    <link rel="prefetch" href="sample-project.html">
+
+    <!-- ============================================================
+    SECTION: STRUCTURED DATA (JSON-LD)
+    ============================================================ -->
+
+    <!-- ---- WebPage, Person, Organization, LocalBusiness, Services ---- -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "WebPage",
+                "@id": "https://codewithbahareh.github.io/home/#webpage",
+                "url": "https://codewithbahareh.github.io/home/",
+                "name": "طراحی سایت حرفه‌ای در اصفهان | Code With Bahareh",
+                "description": "طراحی سایت حرفه‌ای و واکنش‌گرا در اصفهان با سئو قوی و آموزش پروژه‌محور HTML/CSS.",
+                "isPartOf": { "@id": "https://codewithbahareh.github.io/home/#organization" },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://codewithbahareh.github.io/home/image/cover-discover.jpg"
+                }
+            }, {
+                "@type": "Person",
+                "@id": "https://codewithbahareh.github.io/home/#person",
+                "name": "بهاره کربلایی",
+                "jobTitle": "طراح سایت و مدرس HTML و CSS",
+                "url": "https://codewithbahareh.github.io/home/",
+                "image": "https://codewithbahareh.github.io/home/image/transparent-profile-430-580.png",
+                "sameAs": [
+                    "https://www.youtube.com/@CodeWithBahareh",
+                    "https://t.me/code_with_bahareh"
+                ]
+            }, {
+                "@type": "EducationalOrganization",
+                "@id": "https://codewithbahareh.github.io/home/#organization",
+                "name": "Code With Bahareh",
+                "url": "https://codewithbahareh.github.io/home/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://codewithbahareh.github.io/home/image/red-black.png"
+                },
+                "founder": { "@id": "https://codewithbahareh.github.io/home/#person" }
+            }, {
+                "@type": "LocalBusiness",
+                "@id": "https://codewithbahareh.github.io/home/#localbusiness",
+                "name": "Code With Bahareh",
+                "url": "https://codewithbahareh.github.io/home/",
+                "telephone": "+989368816387",
+                "priceRange": "$$",
+                "parentOrganization": { "@id": "https://codewithbahareh.github.io/home/#organization" },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "اصفهان",
+                    "addressCountry": "IR"
+                },
+                "founder": { "@id": "https://codewithbahareh.github.io/home/#person" }
+            }, {
+                "@type": "Service",
+                "@id": "https://codewithbahareh.github.io/home/#webdesign",
+                "name": "طراحی سایت حرفه‌ای در اصفهان",
+                "description": "طراحی وبسایت مدرن، واکنش‌گرا و سئو شده برای کسب‌وکارها در اصفهان",
+                "provider": { "@id": "https://codewithbahareh.github.io/home/#localbusiness" },
+                "areaServed": {
+                    "@type": "AdministrativeArea",
+                    "name": "اصفهان"
+                }
+            }, {
+                "@type": "Service",
+                "@id": "https://codewithbahareh.github.io/home/#training",
+                "name": "آموزش HTML و CSS پروژه‌محور",
+                "description": "آموزش HTML و CSS از صفر تا پیشرفته با پروژه واقعی",
+                "provider": { "@id": "https://codewithbahareh.github.io/home/#localbusiness" }
+            }, {
+                "@type": "Service",
+                "@id": "https://codewithbahareh.github.io/home/#seo",
+                "name": "بهینه‌سازی سئو سایت",
+                "description": "بهبود رتبه سایت در گوگل با تکنیک‌های سئو مدرن",
+                "provider": { "@id": "https://codewithbahareh.github.io/home/#localbusiness" }
+            }]
+        }
+    </script>
 
-    {
-      "@type": "Person",
-      "@id": "https://codewithbahareh.github.io/home/#person",
-      "name": "بهاره کربلایی",
-      "jobTitle": "طراح سایت و مدرس HTML و CSS",
-      "url": "https://codewithbahareh.github.io/home/",
-      "image": "https://codewithbahareh.github.io/home/image/transparent-profile-430-580.png",
-      "sameAs": [
-        "https://www.youtube.com/@CodeWithBahareh",
-        "https://t.me/code_with_bahareh"
-      ]
-    },
+    <!-- ---- FAQ Schema ---- -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "آموزش HTML و CSS چقدر طول می‌کشد؟",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "دوره‌های ما پروژه‌محور و مختلف مدت‌ها دارند. از دوره‌های کوتاه تا دوره‌های جامع را می‌توانید انتخاب کنید."
+                }
+            }]
+        }
+    </script>
 
-    {
-      "@type": "EducationalOrganization",
-      "@id": "https://codewithbahareh.github.io/home/#organization",
-      "name": "Code With Bahareh",
-      "url": "https://codewithbahareh.github.io/home/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://codewithbahareh.github.io/home/image/red-black.png"
-      },
-      "founder": {
-        "@id": "https://codewithbahareh.github.io/home/#person"
-      }
-    },
+    <!-- ---- Breadcrumb Schema ---- -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "خانه", "item": "https://codewithbahareh.github.io/home/" },
+                { "@type": "ListItem", "position": 2, "name": "درباره من", "item": "https://codewithbahareh.github.io/home/#about" },
+                { "@type": "ListItem", "position": 3, "name": "خدمات", "item": "https://codewithbahareh.github.io/home/#services" },
+                { "@type": "ListItem", "position": 4, "name": "تماس", "item": "https://codewithbahareh.github.io/home/#contact" }
+            ]
+        }
+    </script>
 
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://codewithbahareh.github.io/home/#localbusiness",
-      "name": "Code With Bahareh",
-      "url": "https://codewithbahareh.github.io/home/",
-      "telephone": "+989368816387",
-      "priceRange": "$$",
-      "parentOrganization": {
-     "@id": "https://codewithbahareh.github.io/home/#organization"
-        },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "اصفهان",
-        "addressCountry": "IR"
-      },
-      "founder": {
-        "@id": "https://codewithbahareh.github.io/home/#person"
-      }
-    },
+    <!-- ============================================================
+    SECTION: SEO META TAGS
+    ============================================================ -->
+    <meta name="description" content="طراحی سایت حرفه‌ای، واکنش‌گرا و سئو شده در اصفهان. آموزش HTML/CSS پروژه‌محور + میزبانی رایگان GitHub. توسط بهاره کربلایی." />
+    <meta name="keywords" content="طراحی سایت، HTML، CSS، آموزش برنامه‌نویسی، سئو، اصفهان">
+    <meta name="color-scheme" content="light dark">
+    <meta name="format-detection" content="telephone=yes">
 
-    {
-      "@type": "Service",
-      "@id": "https://codewithbahareh.github.io/home/#webdesign",
-      "name": "طراحی سایت حرفه‌ای در اصفهان",
-      "description": "طراحی وبسایت مدرن، واکنش‌گرا و سئو شده برای کسب‌وکارها در اصفهان",
-      "provider": {
-        "@id": "https://codewithbahareh.github.io/home/#localbusiness"
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "اصفهان"
-      }
-    },
+    <!-- ============================================================
+    SECTION: PAGE TITLE
+    ============================================================ -->
+    <title>طراحی سایت حرفه‌ای در اصفهان | سئو و آموزش HTML CSS – Code With Bahareh</title>
 
-    {
-      "@type": "Service",
-      "@id": "https://codewithbahareh.github.io/home/#training",
-      "name": "آموزش HTML و CSS پروژه‌محور",
-      "description": "آموزش HTML و CSS از صفر تا پیشرفته با پروژه واقعی",
-      "provider": {
-        "@id": "https://codewithbahareh.github.io/home/#localbusiness"
-      }
-    },
-
-    {
-      "@type": "Service",
-      "@id": "https://codewithbahareh.github.io/home/#seo",
-      "name": "بهینه‌سازی سئو سایت",
-      "description": "بهبود رتبه سایت در گوگل با تکنیک‌های سئو مدرن",
-      "provider": {
-        "@id": "https://codewithbahareh.github.io/home/#localbusiness"
-      }
-    }
-
-  ]
-}
-</script>
-
-
-
-    <!-- بهبود توضیحات متا -->
-   <meta name="description" content="طراحی سایت حرفه‌ای و واکنش‌گرا در اصفهان با سئو قوی و میزبانی رایگان گیت‌هاب. آموزش HTML و CSS پروژه‌محور، طراحی ارزان و مدرن توسط بهاره کربلایی.">
-
-    <!-- متا تگ‌های موبایل و PWA -->
+    <!-- ============================================================
+    SECTION: PWA & THEME COLOR
+    ============================================================ -->
     <meta name="theme-color" content="#4a6cf7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="manifest" href="/manifest.json">
-    <title> طراحی سایت حرفه‌ای در اصفهان | سئو و آموزش HTML CSS – Code With Bahareh </title>
-    
-    <!-- Open Graph -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ============================================================
+    SECTION: OPEN GRAPH (OG) TAGS
+    ============================================================ -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="طراحی سایت حرفه‌ای در اصفهان | Code With Bahareh">
     <meta property="og:description" content="طراحی سایت مدرن، سئو شده و واکنش‌گرا + آموزش HTML/CSS. میزبانی رایگان با GitHub Pages.">
     <meta property="og:url" content="https://codewithbahareh.github.io/home/">
     <meta property="og:image" content="https://codewithbahareh.github.io/home/image/cover-discover.jpg">
 
-    <!-- Twitter -->
+    <!-- ============================================================
+    SECTION: TWITTER CARD TAGS
+    ============================================================ -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="طراحی سایت حرفه‌ای در اصفهان | Code With Bahareh">
     <meta name="twitter:description" content="طراحی سایت + آموزش HTML/CSS با پروژه واقعی">
     <meta name="twitter:image" content="https://codewithbahareh.github.io/home/image/cover-discover.jpg">
-    <!-- Fonts -->
+
+    <!-- ============================================================
+    SECTION: FONTS
+    ============================================================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Lalezar&display=swap" rel="stylesheet">
-    
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Lalezar&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- ============================================================
+    SECTION: FONT AWESOME (Async Loading)
+    ============================================================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all';this.onload=null;" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <!-- ============================================================
+    SECTION: FAVICON & STYLESHEETS
+    ============================================================ -->
     <link rel="icon" href="../image/red-black.png" type="image/x-icon">
-    <!-- CSS -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
+
+    <!-- ============================================================
+    SECTION: JAVASCRIPT (Deferred)
+    ============================================================ -->
     <script src="script.js" defer></script>
 </head>
-<body>
-    <!-- Skip Link for Accessibility -->
+
+<body itemscope itemtype="https://schema.org/WebPage">
+
+    <!-- ============================================================
+    SECTION: SKIP LINK (Accessibility)
+    ============================================================ -->
     <a href="#main-content" class="skip-link">پرش به محتوا</a>
-    
-    <!-- Header با تغییر چیدمان -->
-    <header class="header" role="banner">
-        <div class="container">
-            <div class="header__content">
-              <div class="header__sitename">
-                    <i class="fas fa-code"></i>
-                    <span class="nowrap">Code With Bahareh</span>
-                    <span class="header__subtitle nowrap">طراحی وب حرفه‌ای</span>
-                </div>
-                
-                <!-- منو در یک خط جداگانه -->
-                <nav class="header__nav" aria-label="منوی اصلی" role="navigation">
-                    <button class="menu-toggle" 
-                            aria-label="بازکردن منو" 
-                            aria-expanded="false"
-                            aria-controls="main-menu">
-                        <i class="fas fa-bars" aria-hidden="true"></i>
-                        <span class="sr-only">منو</span>
-                    </button>
-                    
-                    <ul id="main-menu" class="header__ul" aria-hidden="true" role="menubar">
-                        <li role="none"><a href="#about" role="menuitem"><i class="fas fa-user" aria-hidden="true"></i> درباره من</a></li>
-                        <li role="none">
-                            <a href="teaching.html" role="menuitem" title="آموزش HTML و CSS از صفر تا پیشرفته"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> آموزش</a></li>
-                        <li role="none"><a href="#services" role="menuitem"><i class="fas fa-laptop-code" aria-hidden="true"></i> خدمات</a></li>
-                        <li role="none"><a href="sample-project.html" role="menuitem" title="نمونه کارهای طراحی وبسایت"><i class="fas fa-briefcase" aria-hidden="true"></i> نمونه کارها</a></li>
-                        <li role="none"><a href="#contact" role="menuitem"><i class="fas fa-envelope" aria-hidden="true"></i> تماس</a></li>
-                    </ul>
-                </nav>
+
+    <!-- ============================================================
+    SECTION: HEADER
+    ============================================================ -->
+    <header class="header">
+        <div class="header__content">
+
+            <!-- ---- SITE NAME / BRAND ---- -->
+            <div class="header__sitename">
+                <i class="fas fa-code"></i>
+                <span class="nowrap header__title">Code With Bahareh</span>
+                <span class="header__subtitle nowrap">طراحی وب حرفه‌ای</span>
             </div>
+
+            <!-- ---- NAVIGATION ---- -->
+            <nav class="header__nav" aria-label="منوی اصلی">
+
+                <!-- ---- MOBILE MENU TOGGLE ---- -->
+                <div class="header__actions">
+                    <button class="menu-toggle" aria-label="بازکردن منو" aria-expanded="false" aria-controls="main-menu">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- ---- NAVIGATION LINKS ---- -->
+                <ul id="main-menu" class="header__list">
+                    <li class="header__item">
+                        <a href="#about" class="header__link"><i class="fas fa-user" aria-hidden="true"></i> درباره من</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="teaching.html" class="header__link" title="آموزش HTML و CSS از صفر تا پیشرفته"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> آموزش</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#services" class="header__link"><i class="fas fa-laptop-code" aria-hidden="true"></i> خدمات</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="sample-project.html" class="header__link" title="نمونه کارهای طراحی وبسایت"><i class="fas fa-briefcase" aria-hidden="true"></i> نمونه کارها</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#contact" class="header__link"><i class="fas fa-envelope" aria-hidden="true"></i> تماس</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
     </header>
 
-    <!-- Hero Section با text-shadow -->
+    <!-- ============================================================
+    SECTION: HERO
+    ============================================================ -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero__content">
-                <h1 class="hero__title">
-                طراحی سایت حرفه‌ای 
+        <div class="hero__content">
+            <h1 class="hero__title">
+                طراحی وبسایت حرفه‌ای
                 <span class="highlight">سئو شده، سریع و واکنش‌گرا</span>
-                </h1>
-                <p class="hero__description">
-                    ✅ طراحی وبسایت های حرفه‌ای، مدرن، واکنش‌گرا   
-                    با هاست رایگان گیت‌هاب!💰 آموزش پروژه‌محور HTML/CSS، میزبانی رایگان. 
-                      <br> 
-                    هر پروژه با دقت و خلاقیت  و ❤️ اجرا می‌شود تا بهترین تجربه کاربری را ارائه دهد.
-                </p>
-                <div class="hero__buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i> شروع پروژه
-                    </a>
-                    <a href="sample-project.html" class="btn btn-secondary" title="نمونه کارهای طراحی وب">
-                        <i class="fas fa-eye" aria-hidden="true"></i> مشاهده نمونه کارها
-                    </a>
-                </div>
+            </h1>
+            <div class="hero__buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i> شروع پروژه
+                </a>
+                <a href="sample-project.html" class="btn btn-secondary" title="نمونه کارهای طراحی وب">
+                    <i class="fas fa-eye" aria-hidden="true"></i> مشاهده نمونه کارها
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- ============================================================
+    SECTION: MAIN CONTENT
+    ============================================================ -->
     <main id="main-content" class="main" role="main" tabindex="-1">
 
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="container">
-                <h2 class="section__title">
-                    <i class="fas fa-user-circle" aria-hidden="true"></i> درباره من
-                </h2>
-                <div class="about__content">
-                    <!-- تصویر پروفایل با alt بهینه -->
-                    <div class="about__image">
-                        <div class="image-placeholder">
-                            <img 
-                                src="image/transparent-profile-430-580.png" 
-                                alt="بهاره کربلایی - توسعه‌دهنده وب و مدرس برنامه‌نویسی در اصفهان" 
-                                title="مدرس HTML و CSS | طراحی وبسایت حرفه‌ای"
-                                width="430" 
-                                height="580" 
-                                loading="lazy"
-                            >
-                        </div>
-                    </div>
-                    <div class="about__text">
-                       <h3 class="text-shadow">بهاره کربلایی</h3>
+        <!-- ============================================================
+        SECTION: ABOUT
+        ============================================================ -->
+        <article id="about" class="about" aria-labelledby="about-heading">
 
-                            <p class="text-shadow">
-                                طراح سایت و مدرس HTML و CSS هستم و خدمات طراحی سایت استاتیک، سئو و آموزش پروژه‌محور ارائه می‌دهم.
-                            </p>
-
-                            <p class="text-shadow">
-                                تخصص اصلی در <em>ایجاد وبسایت‌های مدرن، واکنش‌گرا و کاربرپسند</em> است.
-                                از HTML5 و CSS3 گرفته تا JavaScript و فریمورک‌های مدرن،
-                                هر پروژه را با <strong>دقت و توجه به جزئیات</strong> اجرا می‌کنم.
-                            </p>
-
-                        <p class="text-shadow">
-                            تمرکز من بر روی <mark>طراحی وبسایت‌های سریع، امن و بهینه‌شده برای موتورهای جستجو</mark> است.
-                            همچنین به عنوان <strong>مدرس  کدنویسی</strong>، دوره‌های آموزشی HTML و CSS را به صورت پروژه‌محور برگزار می‌کنم.
-                        </p>
-                            <div class="hero__buttons">
-                                <a href="https://www.youtube.com/@CodeWithBahareh"
-                                class="youtube-channel-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                title="آموزش رایگان HTML و CSS پروژه‌محور در یوتیوب">
-                                    🎥 آموزش رایگان HTML و CSS پروژه‌محور در یوتیوب
-                                </a>
-                            </div>
-
-                        <div class="skills">
-                            <span class="skill-tag"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
-                            <span class="skill-tag"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
-                            <!-- <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span> -->
-                            <span class="skill-tag"><i class="fas fa-mobile-alt" aria-hidden="true"></i> واکنش‌گرا</span>
-                        </div>
-                        
-
-                    </div>
-                </div>
+            <!-- ---- IMAGE CONTAINER ---- -->
+            <div class="about__image-container">
+                <header class="about__header">
+                    <h2 class="offscreen">درباره من</h2>
+                </header>
+                <figure class="about__figure" tabindex="0" aria-label="تصویر بهاره کربلایی - طراح وبسایت حرفه‌ای و مدرس HTML و CSS در اصفهان">
+                    <img src="../img/transparent-profile-430-580.png" alt="بهاره کربلایی - طراح وبسایت حرفه‌ای و مدرس HTML و CSS در اصفهان" title="بهاره کربلایی - طراح وبسایت حرفه‌ای و مدرس HTML و CSS در اصفهان" width="430" height="580" loading="lazy" decoding="async" fetchpriority="high" class="about__img" />
+                    <figcaption class="offscreen">مدرس <bdi>HTML</bdi> و <bdi>CSS</bdi> | طراح وبسایت حرفه‌ای</figcaption>
+                </figure>
             </div>
-        </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services section">
-            <div class="container">
-                <h2 class="section__title">
-                    <i class="fas fa-laptop-code" aria-hidden="true"></i> خدمات ما
-                </h2>
-                <div class="services__grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-desktop" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-shadow">طراحی وبسایت استاتیک</h3>
-                        <p class="text-shadow">طراحی حرفه‌ای وبسایت با آخرین تکنولوژی‌ها و استانداردهای روز</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-shadow">واکنش‌گرا (Responsive)</h3>
-                        <p class="text-shadow">سازگاری کامل با تمام دستگاه‌ها از موبایل تا دسکتاپ</p>
-                    </div>
-                    
-                   <a href="teaching.html" class="service-card-link" title="آموزش پروژه‌محور HTML و CSS">
-                        <div class="service-card">
-                            <div class="service-icon">
-                             <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="text-shadow">آموزش</h3>
-                            <p class="text-shadow">
-                            آموزش کامل و پروژه‌محور HTML و CSS از صفر تا پیشرفته
-                            </p>
-                        </div>
+            <!-- ---- ABOUT TEXT ---- -->
+            <div class="about__info">
+                <h2 id="about-heading" class="about__title">بهاره کربلایی</h2>
+                <ul class="about__list">
+                    <li class="about__item">تخصص در ایجاد وبسایت‌های <strong>حرفه ای، مدرن، سئو شده و واکنش‌گرا.</strong></li>
+                    <li class="about__item"><strong>مدرس کدنویسی</strong> &nbsp; ( <bdi>HTML</bdi> و <bdi>CSS</bdi>)</li>
+                </ul>
+                <a href="https://www.youtube.com/@CodeWithBahareh" class="btn--youtube" target="_blank" rel="noopener noreferrer" aria-label="آموزش رایگان HTML و CSS پروژه‌محور در یوتیوب" title="آموزش رایگان HTML و CSS پروژه‌محور در یوتیوب">
+                    🎥 آموزش رایگان &nbsp; HTML &nbsp; و &nbsp;CSS &nbsp; در یوتیوب
+                </a>
+            </div>
+
+        </article>
+
+        <!-- ============================================================
+        SECTION: SKILLS
+        ============================================================ -->
+        <section class="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="offscreen">مهارت‌های فنی</h2>
+            <ul class="skills__list" role="list">
+
+                <!-- ---- HTML5 (with link) ---- -->
+                <li class="skills__item" data-skill="html" data-level="excellent" style="view-transition-name: skill-html;">
+                    <a href="html.html" class="skills__link" aria-label="مشاهده دوره آموزش HTML5" title="مشاهده دوره HTML5">
+                        <i class="fab fa-html5" aria-hidden="true"></i>
+                        <span class="skills__name">HTML5</span>
                     </a>
+                </li>
 
-                       
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-shadow">بهینه‌سازی SEO</h3>
-                        <p class="text-shadow">بهبود رتبه در موتورهای جستجو با تکنیک‌های مدرن</p>
-                    </div>
-                    
-                    <a href="github.html" class="service-card-link" title="میزبانی رایگان با گیت‌هاب">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="text-shadow">گیت‌هاب هاستینگ</h3>
-                            <p class="text-shadow">میزبانی رایگان وبسایت‌های استاتیک با GitHub Pages</p>
-                        </div>
+                <!-- ---- CSS3 (with link) ---- -->
+                <li class="skills__item" data-skill="css" data-level="excellent" style="view-transition-name: skill-css;">
+                    <a href="css.html" class="skills__link" aria-label="مشاهده دوره آموزش CSS3" title="مشاهده دوره CSS3">
+                        <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                        <span class="skills__name">CSS3</span>
                     </a>
-                </div>
-            </div>
+                </li>
+
+                <!-- ---- JavaScript (no link) ---- -->
+                <li class="skills__item" data-skill="javascript" data-level="good" style="view-transition-name: skill-js;">
+                    <i class="fab fa-java" aria-hidden="true"></i>
+                    <span class="skills__name">JavaScript</span>
+                </li>
+
+                <!-- ---- Responsive (no link) ---- -->
+                <li class="skills__item" data-skill="responsive" data-level="excellent" style="view-transition-name: skill-responsive;">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <span class="skills__name">Responsive</span>
+                </li>
+
+                <!-- ---- GitHub Hosting (with link) ---- -->
+                <li class="skills__item" data-skill="responsive" data-level="excellent" style="view-transition-name: skill-responsive;">
+                    <a href="github.html" class="skills__link" aria-label="مشاهده میزبانی رایگان گیت هاب" title="مشاهده میزبانی گیت هاب">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span class="skills__name">Github hosting</span>
+                    </a>
+                </li>
+
+            </ul>
         </section>
 
-       <!-- Contact Section -->
-        <section id="contact" class="contact section">
-            <div class="container">
-                <h2 class="section__title">
-                    <i class="fas fa-envelope" aria-hidden="true"></i> تماس با ما
-                </h2>
-                <div class="contact__content">
-                    <div class="contact__info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone" aria-hidden="true"></i>
-                            <div>
-                                <h3 class="contact-detail">
-                                     <a href="tel:+989368816387">تماس تلفنی</a>
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <div>
-                                <h3>آدرس ایمیل</h3>
-                                <p class="contact-detail">
-                                        codewithbahareh@gmail.com
-                                 
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            <div>
-                                <h3>آدرس</h3>
-                                <p class="contact-detail">اصفهان، ایران</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Back to Top Button با margin-bottom برای جلوگیری از همپوشانی -->
+    <!-- ============================================================
+    SECTION: BACK TO TOP BUTTON
+    ============================================================ -->
     <button id="backToTop" class="back-to-top" aria-label="بازگشت به بالا">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
 
-    <!-- Footer -->
-   <footer class="footer" role="contentinfo">
-        <div class="container">
+    <!-- ============================================================
+    SECTION: FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <div class="footer__wrapper">
+
+            <!-- ---- FOOTER CONTENT (Social + Contact) ---- -->
             <div class="footer__content">
-                <div class="footer__brand">
-                    <h3>
-                        <i class="fas fa-code" aria-hidden="true"></i>
-                        Code With Bahareh
-                    </h3>
-                    <p>متخصص در طراحی و توسعه وبسایت‌های استاتیک مدرن و کاربرپسند</p>
-                </div>
-                
-                <div class="footer__social">
-                    <h4>شبکه‌های اجتماعی</h4>
-                    <div class="social-icons">
-                        <a href="https://www.youtube.com/@CodeWithBahareh" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           aria-label="کانال یوتیوب Code With Bahareh"
-                           title="یوتیوب">
+
+                <!-- ---- SOCIAL LINKS ---- -->
+                <ul class="footer__social-list" role="list" aria-label="شبکه‌های اجتماعی">
+                    <li class="footer__social-item">
+                        <a href="https://www.youtube.com/@CodeWithBahareh" target="_blank" rel="noopener noreferrer" aria-label="کانال یوتیوب Code With Bahareh" title="یوتیوب" class="footer__social-link">
                             <i class="fab fa-youtube" aria-hidden="true"></i>
                         </a>
-                        <!-- <a href="#" aria-label="صفحه اینستاگرام"
-                           title="اینستاگرام">
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://instagram.com/codewithbahareh" target="_blank" rel="noopener noreferrer" aria-label="صفحه اینستاگرام Code With Bahareh" title="اینستاگرام" class="footer__social-link">
                             <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a> -->
-                        <a href="https://t.me/code_with_bahareh" rel="noopener noreferrer" aria-label="تلگرام Code With Bahareh">
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://t.me/code_with_bahareh" target="_blank" rel="noopener noreferrer" aria-label="تلگرام Code With Bahareh" title="تلگرام" class="footer__social-link">
                             <i class="fab fa-telegram" aria-hidden="true"></i>
                         </a>
-
-
-                        <a href="https://wa.me/989368816387"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="واتساپ Code With Bahareh"
-                            title="واتساپ">
-
-
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="https://wa.me/989368816387" target="_blank" rel="noopener noreferrer" aria-label="واتساپ Code With Bahareh" title="واتساپ" class="footer__social-link">
                             <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         </a>
-                        <!-- <a href="#" aria-label="پروفایل گیتهاب"
-                           title="گیتهاب">
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" aria-label="پروفایل گیتهاب Code With Bahareh" title="گیتهاب" class="footer__social-link">
                             <i class="fab fa-github" aria-hidden="true"></i>
-                        </a> -->
-                    </div>
-                </div>
-                
-                <div class="footer__contact">
-                    <h4>اطلاعات تماس</h4>
-                    <p><i class="fas fa-envelope" aria-hidden="true"></i> ایمیل: 
-                     </p>
-                     <p>  
-                            codewithbahareh@gmail.com
-                    </p>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i>
-                        <a href="tel:+989368816387" title="تماس تلفنی">
-                           تماس تلفنی 
                         </a>
-                    </p>
+                    </li>
+                </ul>
+
+                <!-- ---- CONTACT INFO ---- -->
+                <div class="footer__contact">
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> codewithbahareh@gmail.com</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+989368816387" title="تماس تلفنی">تماس تلفنی</a></p>
                 </div>
+
             </div>
-            
+
+            <!-- ---- FOOTER BOTTOM (Copyright & Designer) ---- -->
             <div class="footer__bottom">
-                <p class="copyright">
-                    <i class="far fa-copyright" aria-hidden="true"></i> 
-                    ۱۴۰۳ Code With Bahareh. تمامی حقوق محفوظ است.
-                </p>
-                <p class="designer">
-                    طراحی و توسعه شده با <i class="fas fa-heart" aria-hidden="true"></i> توسط بهاره کربلایی
-                </p>
+                <p class="footer__copyright">&copy; <span id="year"></span> Code With Bahareh. تمامی حقوق محفوظ است.</p>
+                <p class="footer__designer">طراحی و توسعه شده <i class="fas fa-heart" aria-hidden="true"></i> توسط بهاره کربلایی</p>
             </div>
+
         </div>
     </footer>
 
